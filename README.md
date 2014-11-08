@@ -1,6 +1,5 @@
 
-This repo allows users to check their Steam library Linux compatibility    
-
+This repo gives the user magic powers! WIZARDS UNITE!
 
 It uses JSON calls to Steam's public API. To use the public API to gather a user's library information, you must register your domain with Steam to receive a key    
 
