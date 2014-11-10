@@ -1,29 +1,44 @@
 <html>
 <head>
-<title> Steam Library - Linux Check</title>
+<title> Steam Library - Compatibility Check</title>
 </head>
 <body>
 
 <br>
-<h4> Check your Steam Library's Linux Availability </h4>
-Enter your steam user ID to see which of your Steam games are Linux compatible!
-<br><br>
+<h3> Check your Steam Library's Cross Platform Availability </h3>
 
-<form name="steamchecker" action="magic.php" method="POST">
-<input type="text" name="steam_userid" value=""></input><br>
-<input type="submit" name="GetGameList" value="Check My Steam Library!"></input><br>
+<h4>Linux Compatibility Checker</h4>
+<form name="steamchecker" action="linuxreport.php" method="POST">
+<input type="text" name="steam_userid" value="123456789"></input><br>
+<input type="submit" name="GetGameList" value="Show my Linux Compatible Games!"></input><br>
+</form>
+<h5>Note: Allow 2-3 minutes for the list to be generated and filtered<br>
+</h5><br>
+
+<h4>Mac Compatibility Checker</h4>
+<form name="steamchecker" action="macreport.php" method="POST">
+<input type="text" name="steam_userid" value="123456789"></input><br>
+<input type="submit" name="GetGameList" value="Show my Mac Compatible Games!"></input><br>
+</form>
+<h5>Note: Allow 2-3 minutes for the list to be generated and filtered<br>
+</h5><br>
+
+<h4>Composite Compatibility Checker</h4>
+<form name="steamchecker" action="compositereport.php" method="POST">
+<input type="text" name="steam_userid" value="123456789"></input><br>
+<input type="submit" name="GetGameList" value="Show both Linux and Mac Compatible games!"></input><br>
 </form>
 <h5>Note: Allow 2-3 minutes for the list to be generated and filtered<br>
 </h5><br>
 
 <h4> How to Use </h4>
-To get your Steam profile ID, go to the Steam Community page and search by your username and pull up your profile
-<br><a href="http://steamcommunity.com/">[ http://SteamCommunity.com ]</a><br><br>
+To get your Steam profile ID (it will be a bunch of numbers, not your Steam user name), go to the Steam Community page and search by your username and pull up your profile
+<br><a href="http://steamcommunity.com/">[http://SteamCommunity.com]</a><br><br>
 
-The result will be something like:<br>
+The resulting URL will be something like:<br>
 http://steamcommunity.com/profiles/123456789<br><br>
 
-Copy the "123456789" and paste into the textbox and click on the "Check My Steam Library!" button
+Copy the "123456789" from the URL and paste into the textbox and click on the respective submit button
 <br><br><br>
 
 <h4>Security Info</h4>
@@ -34,7 +49,7 @@ All data used to generate the report is publicly accessible through Steam's API 
 <br><br>
 We do not use cookies, trackers, popups, or javascript
 <br><br>
-This site will remain ad and donation free
+This site will remain ad and donation free, complete with 90's look and feel.
 
 </body>
 </html>
