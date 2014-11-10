@@ -8,7 +8,7 @@ $userid_raw = $_POST["steam_userid"];
 $userid = htmlspecialchars($userid_raw);
 
 // Call Steam API for user. Stop if user doesn't exist
-if(!($json_user_games_raw = file_get_contents("http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=" . $steamkey . "&steamid=" . $userid . "&format=json"))) {
+if(!(preg_match($steam_userid_pattern, $userid) && ($json_user_games_raw = file_get_contents("http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=" . $steamkey . "&steamid=" . $userid . "&format=json")))) {
     echo 'Oops! No steam user found for this id!<br>';
     echo 'ID: ' . $userid . '<br>';
     echo '<a href="home.html">Return to Home Page</a>';
